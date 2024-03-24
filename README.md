@@ -39,6 +39,9 @@ To install all the dependencies at once you can use the included installation sc
 ./install-deps.sh
 ```
 
+<details>
+    <summary><hr4>Individual Dependencies</hr4></summary>
+
 - [Gum](https://github.com/charmbracelet/gum)
 
 ```bash { background=false category=dependency closeTerminalOnSuccess=false excludeFromRunAll=true interactive=true interpreter=bash name=install-dep-gum promptEnv=true terminalRows=10 }
@@ -68,6 +71,8 @@ go install github.com/cli/cli/v2/cmd/gh@latest
 ```bash { background=false category=dependency closeTerminalOnSuccess=false excludeFromRunAll=true interactive=true interpreter=bash name=install-dep-gitlab-cli promptEnv=true terminalRows=10 }
 go install gitlab.com/gitlab-org/cli/cmd/glab@latest
 ```
+
+</details>
 
 ## Releases
 
@@ -114,7 +119,8 @@ Install or refresh git aliases for the helpers.
 ./install-git-aliases.sh
 ```
 
-### git-commit-helper
+<details>
+    <summary><hr3>git-commit-helper</hr3></summary>
 
 Not a dumb tool, it helps:
 
@@ -122,7 +128,10 @@ Not a dumb tool, it helps:
 - spell check your subject and body and
 - lint unpushed commit(s) or the task branch.
 
-### git-fixup-helper
+</details>
+
+<details>
+    <summary><hr3>git-fixup-helper</hr3></summary>
 
 This one makes using fixup commits easier.
 
@@ -133,7 +142,10 @@ As I add scripts, they are successfully better than the last.
 - Has a roundabout way of browsing commit fixup candidates.
 - Guides user on next steps.
 
-### git-new-branch-helper
+</details>
+
+<details>
+    <summary><hr3>git-new-branch-helper</hr3></summary>
 
 This script creates a new worktree and branch and then shows you how to clean up after you're done with your change review.
 
@@ -145,7 +157,10 @@ Note: Using `cr` for `change-review` instead of `pr` for `pull-request` or `mr` 
 - show users how to start using their new branch and worktree
 - show users how to remove their new worktree and branch (that will get replaced by the next helper)
 
-### git-delete-branch-helper
+</details>
+
+<details>
+    <summary><hr3>git-delete-branch-helper</hr3></summary>
 
 This scripts automates the deletion of branches, and associated worktrees, from a local and remotes.
 
@@ -160,14 +175,20 @@ If you need to perform a surgical deletion of the branch, do it by hand.
 - delete the branch from all remotes
 - declare victory over the evil Branchians, maybe use that terminal fireworks CLI
 
-### git-clean-up-branches-helper
+</details>
+
+<details>
+    <summary><hr3>git-clean-up-branches-helper</hr3></summary>
 
 Almost the same as `git-delete-branch-helper`.
 The difference is that the user starts with all the merged branches selected and all the not-merged branches are omitted from the selection screen.
 
 - Supports headless mode so it can be run from git.
 
-### git-fetch-cr-helper
+</details>
+
+<details>
+    <summary><hr3>git-fetch-cr-helper</hr3></summary>
 
 Used to simplify the process of checking out a change review (CR) branch from GitHub/GitLab.
 
@@ -179,7 +200,10 @@ Used to simplify the process of checking out a change review (CR) branch from Gi
 - Adds remote (when the change review author used a fork) that can be tracked and pushed to.
 - Reminds users to use `git-fixup-helper` when modifying existing commits to make it easier to show/review changes by the change review author..
 
-### git-master-to-main-migration-helper
+</details>
+
+<details>
+    <summary><hr3>git-master-to-main-migration-helper</hr3></summary>
 
 I hate it when someone renames the `master` branch to `main` without taking care that other developers don't just re-push the `master` branch and keep working with it.
 
@@ -194,3 +218,5 @@ This helper helps with that problem. It's a lot of steps to run by hand over and
     - goal is to make it very obvious they need to stop using `master` and to start using `main`
     - force push `master`
     - block force pushes on `master` upstream(s)
+
+</details>
